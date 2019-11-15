@@ -10,10 +10,11 @@ public class MenuItem {
     private Date dateAdded;
     private boolean isNew;
 
-    public MenuItem(double price, String description, String category, boolean isNew) {
+    public MenuItem(double price, String description, String category, Date dateAdded, boolean isNew) {
         this.price = price;
         this.description = description;
         this.category = category;
+        this.dateAdded = dateAdded;
         this.isNew = isNew;
     }
 
@@ -39,6 +40,14 @@ public class MenuItem {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public Date getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(Date dateAdded) {
+        this.dateAdded = dateAdded;
     }
 
     public boolean isNew() {

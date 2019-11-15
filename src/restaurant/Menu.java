@@ -1,22 +1,23 @@
 package restaurant;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Menu {
 
-    private String lastUpdated; // we haven't learned about 'Date' data type yet
-    private ArrayList<MenuItem> menuList = new ArrayList<>();
+    private Date lastUpdated;
+    private ArrayList<MenuItem> menuList;
 
-    public Menu(String lastUpdated) {
+    public Menu(Date lastUpdated, ArrayList<MenuItem> menuList) {
         this.lastUpdated = lastUpdated;
         this.menuList = menuList;
     }
 
-    public String getLastUpdated() {
+    public Date getLastUpdated() {
         return lastUpdated;
     }
 
-    public void setLastUpdated(String lastUpdated) {
+    public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
 
@@ -28,12 +29,26 @@ public class Menu {
         this.menuList = menuList;
     }
 
-    // create specific menu items using MenuItem class
+    // Create method to add new items to menu list and mark 'isNew' as true
 
-    // create method to add new items to menu list and mark 'isNew' as true
+    public void addMenuItem(MenuItem item) {
+        menuList.add(item);
+        // mark isNew as true
+    }
 
-    // create method to loop through all items in menu list to
-    // change 'isNew' to false IF a certain amount of time has passed
-    // based on date added
+    /*
+    Create method to loop through all items in menu list to
+    change 'isNew' to false IF a certain amount of time has passed
+    based on date added
+    */
+
+    public void updateMenu(ArrayList<MenuItem> menuList) {
+        for (item : menuList) {
+            if ( ) { // if dateAdded property of item is more than X days ago
+                // change isNew to false
+            }
+        }
+        // change lastUpdated to today's date
+    }
 
 }
